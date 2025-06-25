@@ -17,6 +17,8 @@ services:
       dockerfile: ./docker/Dockerfile
       args:
         RELEASE_VERSION: 8.1.1
+    volumes:
+      - ./dets:/app/dets
 
 
   nft_media_handler:
@@ -30,6 +32,8 @@ services:
       dockerfile: ./docker/Dockerfile
       args:
         RELEASE_VERSION: 8.1.1
+    volumes:
+      - ./dets:/app/dets
 
   visualizer:
     extends:
