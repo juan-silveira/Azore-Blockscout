@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  nft_media_handler:
+    # Removed: image: ghcr.io/blockscout/${DOCKER_REPO:-blockscout}:${DOCKER_TAG:-latest}
+    # Removed: pull_policy: always
+    # Force build from local source with Azore customizations
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+      args:
+        RELEASE_VERSION: 8.1.1
+    restart: always
+    stop_grace_period: 5m
+    container_name: 'nft_media_handler'
+    command: sh -c "bin/blockscout start"
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    env_file:
+      -  ../envs/common-nft-media-handler.env
+    volumes:
+      - ./logs/:/app/logs/

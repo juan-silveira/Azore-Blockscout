@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  frontend:
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+      target: frontend
+      args:
+        RELEASE_VERSION: 8.1.1
+    platform: linux/amd64
+    restart: always
+    container_name: 'frontend'
+    env_file:
+      -  ../envs/common-frontend.env
