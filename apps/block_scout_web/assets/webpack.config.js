@@ -29,8 +29,17 @@ function transpileViewScript(file) {
 };
 
 const jsOptimizationParams = {
-  parallel: true
-}
+  parallel: 1,
+  extractComments: false,
+  terserOptions: {
+    ecma: 2016,
+    compress: true,
+    mangle: true,
+    format: {
+      comments: false,
+    }
+  }
+};
 
 const appJs =
   {
@@ -85,6 +94,7 @@ const appJs =
     },
     optimization: {
       minimizer: [new TerserJSPlugin(jsOptimizationParams), new CssMinimizerPlugin()],
+//      minimize: false
     },
     module: {
       rules: [
