@@ -170,13 +170,13 @@
             <%= unless Enum.empty?(test_nets) do %>
               <a class="dropdown-item header division">Testnets</a>
               <%= for %{url: url, title: title} <- test_nets do %>
-                <a class="dropdown-item" href="<%= url %>" target="_blank"><%= title %></a>
+                <a class="dropdown-item" href="<%= url %>"><%= title %></a>
               <% end %>
             <% end %>
             <%= unless Enum.empty?(other_nets) do %>
               <a class="dropdown-item header division">Other Networks</a>
               <%= for %{url: url, title: title} <- other_nets do %>
-                <a class="dropdown-item" href="<%= url %>" target="_blank"><%= title %></a>
+                <a class="dropdown-item" href="<%= url %>"><%= title %></a>
               <% end %>
             <% end %>
           </div>
