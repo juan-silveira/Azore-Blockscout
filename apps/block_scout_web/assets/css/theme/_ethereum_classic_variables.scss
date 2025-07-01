@@ -1,15 +1,15 @@
 // general
 $primary: #1c1c3d;
 $secondary: #4ad7a7;
-$tertiary: #5959d8;
-$additional-font: #bdbdff;
+$tertiary: #525ff4;
+$additional-font: #b3c3ff;
 
 // footer
 $footer-background-color: $primary;
 $footer-title-color: #fff;
 $footer-text-color: $additional-font;
 $footer-item-disc-color: $tertiary;
-$footer-social-icon-color: #5959d8;
+$footer-social-icon-color: #525ff4;
 
 // dashboard
 $dashboard-line-color-price: $secondary;
@@ -79,6 +79,6 @@ $badge-neutral-background-color: rgba($tertiary, .1);
 $api-text-monospace-color: $tertiary;
 
 // Dark theme
-$dark-primary: #8588ff;
+$dark-primary: #7a96ff;
 $dark-secondary: #4ad7a7;
-$dark-primary-alternate: #5b5ed8;
+$dark-primary-alternate: #5061f4;
